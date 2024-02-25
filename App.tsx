@@ -17,7 +17,7 @@ export default function App() {
     }
 
     try{
-        const response = await Api.get('/${cep}/json/')
+        const response = await Api.get('/01001000/json/')
     }catch(error){
       console.log("ERRO" + error)
     }
