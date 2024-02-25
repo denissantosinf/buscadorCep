@@ -17,7 +17,11 @@ export default function App() {
     }
 
     try{
-        const response = await Api.get('/01001000/json/')
+        const response = await Api.get(`/${cep}/json/`) 
+        setLogradouro(response.data.logradouro)
+        setBairro(response.data.bairro)
+        setLocalidade(response.data.localidade)
+        setUf(response.data.uf)
     }catch(error){
       console.log("ERRO" + error)
     }
